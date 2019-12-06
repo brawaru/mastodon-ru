@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"module": "es2015",
+		"target": "es6",
+		"lib": [
+			"DOM",
+			"esnext",
+			"ES2018.Promise"
+		],
+		"strict": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"outDir": "./dist/assets/js/",
+		"baseUrl": ".",
+		"allowJs": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": [
+		"./src/js"
+	],
+	"exclude": [
+		"node_modules"
+	],
+}

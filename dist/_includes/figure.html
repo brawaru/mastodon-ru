@@ -1,0 +1,8 @@
+<figure>
+	{% if include.picture %}
+	{% include picture.html src=include.src no_webp=include.no_webp no_png=include.no_png no_jpg=include.no_jpg alt=include.alt style=include.style no_wrap=true %}
+	{% else %}
+	<img src="{{ include.src }}" alt="{{ include.alt }}">
+	{% endif %}
+	<figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+</figure>

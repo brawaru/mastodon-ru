@@ -1,0 +1,38 @@
+{% if include.author_avatar %}
+  {% assign avatar_url = include.author_avatar | absolute_url %}
+{% endif %}
+
+{% if page.language %}
+{% assign locale_used = page.language %}
+{% elsif site.language %}
+{% assign locale_used = site.language %}
+{% else %}
+{% assign locale_used = "en" %}
+{% endif %}
+
+{% assign locale = site.data.i18n[locale_used] %}
+
+{% if include.author %}
+{% assign avatar_alt = include.author %}
+{% else %}
+{% assign avatar_alt = locale.quotation.avatar %}
+{% endif %}
+
+<blockquote class="linked"><p>{{ include.content }}</p></blockquote>
+{% if include.author %}
+<div class="quote">
+	<div class="author">
+		{% if avatar_url %}
+		<div class="avatar">
+			<img src="{{ avatar_url }}" alt="{{ avatar_alt }}">
+  	</div>
+		{% endif %}
+		<div class="info">
+			<div class="name">{{ include.author }}</div>
+				{% if include.author_role %}
+				<div class="role">{{ include.author_role }}</div>
+				{% endif %}
+		</div>
+	</div>
+</div>
+{% endif %}

@@ -1,0 +1,19 @@
+navigation:
+  about: "About"
+  contribute: "Edit"
+  skip_link: "Skip to content"
+
+quotation:
+  avatar: "Avatar"
+
+footer:
+  separator: "·"
+  edit_page: "Edit this page"
+  up: "Up"
+  copyright: "Additional materials belong to their respective owners."
+
+copyright: "Except where otherwise noted, the website is licensed under a {license}"
+
+_404:
+  title: "What a bummer!"
+  sub_text: "Seems there's no such page."

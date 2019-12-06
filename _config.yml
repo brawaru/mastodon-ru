@@ -1,0 +1,43 @@
+source: dist
+destination: public
+
+title: "Mastodon по-русски"
+
+language: "ru"
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      language: "ru"
+  - scope:
+      path: "docs"
+      type: pages
+    values:
+      wikify: Yes
+
+copyright:
+  license: "CC-BY 4.0"
+  additional_material: /copyrights
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  # - jekyll-mentions
+
+exclude_pages:
+  - 404.html
+  - sitemap.xml
+  - robots.txt
+  - redirects.json
+  - feed.xml
+
+top_menu_links:
+  # - title: about
+  #   url: about
+  - title: contribute
+    is_edit: Yes

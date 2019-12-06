@@ -1,0 +1,46 @@
+{
+  "name": "mastodon-ru",
+  "version": "1.0.0",
+  "description": "Project about crowdsourced translation of Mastodon to Russian.",
+  "author": {
+    "name": "Sasha Sorokin",
+    "url": "https://github.com/Sasha-Sorokin"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp && bundle exec jekyll build"
+  },
+  "bugs": {
+    "url": "https://github.com/Sasha-Sorokin/mastodon-ru"
+  },
+  "homepage": "https://github.com/Sasha-Sorokin/mastodon-ru#README",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.4",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^18.1.5",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-header": "^2.0.9",
+    "gulp-run-command": "0.0.10",
+    "gulp-sass": "^4.0.2",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.0",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel-minify": "^9.1.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "tslib": "^1.10.0",
+    "tslint": "^5.20.1",
+    "tslint-consistent-codestyle": "^1.16.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,18 @@
+{% assign pages_css = "/assets/css/pages.css" | absolute_url %}
+{% assign print_css = "/assets/css/printing.css" | absolute_url %}
+
+<head>
+	<meta charset="utf-8">
+	<title>{{ page.title }} — {{ site.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="preload" href="{{ pages_css }}" as="style">
+	<link type="text/css" rel="stylesheet" href="{{ pages_css }}">
+	<link type="text/css" rel="stylesheet" href="{{ print_css }}" media="print">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Exo+2:400,400i|Ubuntu+Mono&display=swap&subset=cyrillic" as="style" crossorigin>
+	{% for link in site.data.gfonts_preload %}
+	<link rel="preload" href="{{ link }}" as="font" crossorigin>
+	{% endfor %}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:400,400i|Ubuntu+Mono&display=swap&subset=cyrillic" crossorigin>
+	{% seo title=false %}
+</head>

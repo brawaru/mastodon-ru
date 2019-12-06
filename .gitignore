@@ -1,0 +1,9 @@
+_site
+public
+.vscode
+.sass-cache
+.jekyll-metadata
+.jekyll-cache
+{.,dist}/.jekyll-cache
+dist/assets
+node_modules

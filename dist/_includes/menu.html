@@ -1,0 +1,18 @@
+{% if page.language %}
+{% assign locale_used = page.language %}
+{% elsif site.language %}
+{% assign locale_used = site.language %}
+{% else %}
+{% assign locale_used = "en" %}
+{% endif %}
+
+{% assign locale = site.data.i18n[locale_used] %}
+
+<nav class="menu clearfix">
+	<a href="{{ '/' | absolute_url }}" class="logo no-link-deco">{{ site.title }}</a>
+	<ul>
+		{% for link in site.top_menu_links %}
+		<li><a class="no-link-deco" href="{% if link.is_edit %}{{ include.edit_url }}{% else %}{{ link.url | absolute_url }}{% endif %}" {% if link.external %} rel="noreferrer" target="_blank" {% endif %} {% if page.url == link.url %} class="current" {% endif %}>{{ locale.navigation[link.title] }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>

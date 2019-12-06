@@ -1,0 +1,49 @@
+{% capture src %}
+<picture>
+	{% assign webp_url = include.src | append: '.webp' %}
+	{% assign png_url = include.src | append: '.png' %}
+	{% assign jpg_url = include.src | append: '.jpg' %}
+
+	{% if include.src_set %}
+
+	{% assign src_set_base = include.src_set | replace: "[[src]]", include.src %}
+
+	{% assign webp_set_url = src_set_base | replace: '[[ext]]', 'webp' %}
+	{% assign png_set_url = src_set_base | replace: '[[ext]]', 'png' %}
+	{% assign jpg_set_url = src_set_base | replace: '[[ext]]', 'jpg' %}
+
+	{% unless include.no_webp %}<source srcset="{{ webp_set_url }}"> {% endunless %}
+	{% unless include.no_png %}<source srcset="{{ png_set_url }}"> {% endunless %}
+	{% unless include.no_jpg %}<source srcset="{{ jpg_set_url }}"> {% endunless %}
+
+	<img
+		src="{% if include.no_jpg %}{{ png_url }}{% else %}{{ jpg_url }}{% endif %}"
+		srcset="{% if include.no_jpg %}{{ png_set_url }}{% else %}{{ jpg_set_url }}{% endif %}"
+		alt="{{ include.alt }}"
+		{% if include.style %}style="{{ include.style }}"{% endif %}
+		{% if include.width %}width="{{ include.width }}"{% endif %}
+		{% if include.height %}height="{{ include.height }}"{% endif %}
+	>
+
+	{% else %}
+
+	{% unless include.no_webp %}<source srcset="{{ webp_url }}" type="image/webp">{% endunless %}
+	{% unless include.no_png %}<source srcset="{{ png_url }}" type="image/png">{% endunless %}
+	{% unless include.no_jpg %}<source srcset="{{ jpg_url }}" type="image/jpeg">{% endunless %}
+
+	<img
+		src="{% if include.no_jpg %}{{ png_url }}{% else %}{{ jpg_url }}{% endif %}"
+		alt="{{ include.alt }}"
+		{% if include.style %}style="{{ include.style }}"{% endif %}
+		{% if include.width %}width="{{ include.width }}"{% endif %}
+		{% if include.height %}height="{{ include.height }}"{% endif %}
+	>
+	{% endif %}
+</picture>
+{% endcapture %}
+
+{% if include.no_wrap %}
+{{src | markdownify }}
+{% else %}
+<p>{{src}}</p>
+{% endif %}

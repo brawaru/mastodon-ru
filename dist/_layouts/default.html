@@ -1,0 +1,85 @@
+<!-- {% if page.author.avatar %}
+{% assign avatar_url = page.author.avatar %}
+{% else %}
+{% assign avatar_url = '/assets/no_avatar.jpg' | absolute_url %}
+{% endif %} -->
+
+{% assign edit_url = site.github.repository_url | append: '/edit/gh-pages/' | append: page.path %}
+
+
+{% if page.language %}
+{% assign locale_used = page.language %}
+{% elsif site.language %}
+{% assign locale_used = site.language %}
+{% else %}
+{% assign locale_used = "en" %}
+{% endif %}
+
+{% assign locale = site.data.i18n[locale_used] %}
+
+<!DOCTYPE html>
+<html lang="{{ locale_used }}" xml:lang="{{ locale_used }}" prefix="og: http://ogp.me/ns#">
+{% include head.html %}
+
+<body class="{% if page.wikify %}wikify{% endif %}">
+	<a href="#content" class="skip-content no-link-deco">{{ locale.navigation.skip_link }}</a>
+
+	{% include menu.html edit_url=edit_url %}
+	<article id="content" class="main-content content-centered">
+		{% unless page.hide_title %}
+		<h1>{{ page.title }}</h1>
+		{% endunless %}
+		{% capture toc %}
+		<details class="toc">
+			<summary>Содержание</summary>
+
+			{% include toc.html html=content %}
+		</details>
+		{% endcapture %}
+		{% capture pg %}
+		{% include anchor_headings.html html=content anchorClass="header-anchor" anchorBody="#" h_min=2 %}
+		{% endcapture %}
+		{{ pg | replace: '[[toc]]', toc }}
+	</article>
+
+	{% if site.copyright %}
+	<footer class="content-centered clearfix">
+
+		{% assign copyright = site.copyright %}
+		<div class="copyright">
+			<div class="copyright-icon">©</div>
+			<div class="copyright-content">
+				{% if copyright.author %}
+				{% elsif copyright.license %}
+				{% assign license_replace = "{license}" %}
+				{{ locale.copyright | replace: license_replace, copyright.license }}
+				{% endif %}
+				<br>
+				{% if copyright.additional_material %}
+				<a href="{{ site.copyright.additional_material | relative_url }}">{{ locale.footer.copyright }}</a>
+				{% endif %}
+			</div>
+		</div>
+
+		<a href="#" class="up-link no-link-deco" title="{{ locale.footer.up }}">⮵</a>
+	</footer>
+	{% endif %}
+
+	<!-- <a href="#" class="floating-up-link no-link-deco">
+		<div class="inside">{{ locale.arrows.up }}</div>
+	</a>
+
+	<a href="#" class="floating-up-link reverse hidden no-link-deco" style="display: none;"
+		tabindex="-1">
+		<div class="inside">{{ locale.arrows.down }}</div>
+	</a> -->
+
+	{% for script in page.meta.scripts %}
+	<script src="{{ '/assets/js/' | append: script | append: '.js' | absolute_url }}"></script>
+	{% endfor %}
+
+	<script src="{{ '/assets/js/' | append: 'nav-arrows.js' | absolute_url }}"></script>
+	<script src="{{ '/assets/js/' | append: 'media-viewer.js' | absolute_url }}"></script>
+</body>
+
+</html>

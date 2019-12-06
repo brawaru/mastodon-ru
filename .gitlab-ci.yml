@@ -1,0 +1,12 @@
+image: alpine:3.10
+
+pages:
+  script:
+    - apk add ruby nodejs
+    - npm i
+    - npm build
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

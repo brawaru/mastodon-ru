@@ -1,0 +1,31 @@
+a.icu-test {
+	// color: unset !important;
+	position: relative;
+	display: block;
+
+	color: unset;
+
+	&::after {
+		content: "↯";
+
+		position: absolute;
+
+		right: 1px;
+		top: -4px;
+
+		margin: 0;
+
+		opacity: .4;
+
+		transition: opacity .25s;
+
+		font-size: 2em;
+		font-weight: bolder;
+
+		color: rgb(255, 208, 0);
+	}
+
+	&:hover::after {
+		opacity: 1;
+	}
+}

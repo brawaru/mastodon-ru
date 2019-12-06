@@ -1,0 +1,14 @@
+@media print {
+	nav.menu ul {
+		display: none;
+	}
+
+	div.note,
+	blockquote {
+		page-break-inside: avoid;
+	}
+
+	footer .up-link {
+		display: none;
+	}
+}
