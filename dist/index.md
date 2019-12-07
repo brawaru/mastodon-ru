@@ -5,7 +5,7 @@ image: "files/languages.gif"
 hide_title: Yes
 ---
 
-{% include picture.html src="./assets/media/elephant/elephant" alt="Слон" no_jpg=true style="float: right; width: 160px; padding-top: 15px" %}
+{% include picture.html src="./media/elephant/elephant" alt="Слон" no_jpg=true style="float: right; width: 160px; padding-top: 15px" %}
 
 # {{ page.title }}
 
