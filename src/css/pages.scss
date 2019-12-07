@@ -35,6 +35,10 @@ body {
 
 	.media-overlay-available {
 		cursor: pointer;
+
+		&:focus {
+			box-shadow: 0 0 0 3px rgba(190, 190, 190, 0.60)
+		}
 	}
 
 	&.wikify {

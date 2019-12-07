@@ -394,6 +394,8 @@ export class MediaViewer {
 			popMedia(e);
 		});
 
+		media.tabIndex = 0;
+
 		media.classList.add(Classes.MediaOverlayAvailable);
 
 		mediaId.setMediaID(
