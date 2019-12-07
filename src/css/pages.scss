@@ -902,7 +902,7 @@ div.media-overlay {
 		transform: scale(1);
 		transition: transform .25s;
 
-		img {
+		img, video, iframe {
 			max-width: $breaking-width;
 
 			background: white;
@@ -922,6 +922,14 @@ div.media-overlay {
 			margin: 0 auto;
 			border-radius: 20px;
 			max-width: $breaking-width - 5vw;
+
+			a {
+				color: white;
+
+				&::after {
+					@include external-link(white, true);
+				}
+			}
 		}
 
 		& > * {
