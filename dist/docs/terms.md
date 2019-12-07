@@ -3,7 +3,7 @@ title: "Принятые определения"
 description: "Страница с принятыми определениями."
 meta:
   scripts:
-    - neat_table
+    - neat-table
 ---
 
 {% assign edit_link = "https://github.com/Sasha-Sorokin/mastodon-ru/edit/gh-pages/_data/terms.csv" %}
