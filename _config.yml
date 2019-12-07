@@ -1,5 +1,6 @@
 source: dist
 destination: public
+baseurl: "/mastodon-ru/"
 
 title: "Mastodon по-русски"
 
