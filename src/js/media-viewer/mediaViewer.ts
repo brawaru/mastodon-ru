@@ -321,12 +321,18 @@ export class MediaViewer {
 			this._mount.appendChild(mountable);
 		}
 
-		if (clonedElement != null && media.dataset[DatasetKeys.KeepSizes] !== "true") {
+		if (clonedElement != null) {
 			if (clonedElement.tagName === "PICTURE") {
 				clonedElement = clonedElement.querySelector("img");
 			}
 
-			if (clonedElement != null) this._voidSizes(clonedElement);
+			if (clonedElement != null) {
+				if (media.dataset[DatasetKeys.KeepSizes] !== "true") {
+					this._voidSizes(clonedElement);
+				}
+
+				clonedElement.classList.remove(Classes.MediaOverlayAvailable);
+			}
 		}
 
 		if (parent?.tagName === "FIGURE") {
