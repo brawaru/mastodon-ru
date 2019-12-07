@@ -2,7 +2,9 @@ image: alpine:3.10
 
 pages:
   script:
-    - apk add ruby nodejs
+    - apk add ruby-full ruby-dev build-base nodejs npm
+    - gem install jekyll bundler
+    - bundler install
     - npm i
     - npm build
   artifacts:
