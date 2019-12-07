@@ -1,7 +1,7 @@
 ---
 title: "Вступайте в команду переводчиков Mastodon!"
 description: "Mastodon переводится добровольцами по всему миру, использующих его ежедневно. Желаете помочь нам? Узнайте как вступить в команду!"
-image: "files/languages.gif"
+image: "./media/elephant/elephant.png"
 hide_title: Yes
 ---
 
