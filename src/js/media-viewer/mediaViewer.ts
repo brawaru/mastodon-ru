@@ -27,11 +27,11 @@ const enum DatasetKeys {
 	 * Для этого элемента не требуется встраивание его копии,
 	 * наоборот, необходимо встроить произвольный код
 	 */
-	ArbitraryCode = "media-viewer-arbitrary",
+	ArbitraryCode = "mediaViewerArbitrary",
 	/**
 	 * Для этого элемента не требуется убирать его изначальный размер
 	 */
-	KeepSizes = "media-viewer-keep-sizes",
+	KeepSizes = "mediaViewerKeepSizes",
 }
 
 const enum Classes {
