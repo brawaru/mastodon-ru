@@ -36,6 +36,10 @@ exclude_pages:
   - redirects.json
   - feed.xml
 
+github:
+  repository_url: "https://github.com/Sasha-Sorokin/mastodon-ru/"
+  pages_branch: "master/dist"
+
 top_menu_links:
   # - title: about
   #   url: about

@@ -4,7 +4,8 @@
 {% assign avatar_url = '/assets/no_avatar.jpg' | absolute_url %}
 {% endif %} -->
 
-{% assign edit_url = site.github.repository_url | append: '/edit/gh-pages/' | append: page.path %}
+{% assign edit_branch = site.github.pages_branch | default: "gh-pages" %}
+{% assign edit_url = site.github.repository_url | append: 'edit/' | append: edit_branch | append: '/' | append: page.path %}
 
 
 {% if page.language %}
