@@ -6,7 +6,7 @@ pages:
     - gem install jekyll bundler
     - bundler install
     - npm i
-    - npm build
+    - npm run-script build
   artifacts:
     untracked: true
     paths:
