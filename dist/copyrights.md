@@ -5,12 +5,12 @@ description: "Мы используем материалы которые не �
 
 {{ page.description }} Весь материал используется исключительно в ознакомительных или обучающих целях.
 
-- [files/crowdin_editor/\*](/files/crowdin_editor/crowdin_editor.png), [files/translation_panel/\*](/files/translations_panel/translations_panel.png)
+- [docs/assets/crowdin_editor/\*]({{ '/docs/assets/crowdin_editor/crowdin_editor.png' | absolute_url }}), [docs/assets/translations_panel/\*]({{'/docs/assets/translations_panel/translations_panel.png' | absolute_url}})
 
   - © 2016-2019 OÜ Crowdin — https://crowdin.com/
   - Эти файлы — скриншоты программного обеспечения или сайта
   - Источник: *сайт Crowdin*
-- [files/elephant/\*](/files/elephant/elephant.png)
+- [media/elephant/\*]({{ '/media/elephant/elephant.png' | absolute_url }})
   - © 2015-2019 Mastodon
   - AGPL-3.0
   - Источник: *пресс-кит*
@@ -23,5 +23,5 @@ description: "Мы используем материалы которые не �
 
 ### Связанные страницы
 
-- [О проекте](/about.md)
-- [Применяемые к проекту лицензии]({{'/LICENSE' | absolute_url}})
+- [О проекте]({{'/about' | absolute_url}})
+- [Применяемые к проекту лицензии]({{'/license' | absolute_url}})
