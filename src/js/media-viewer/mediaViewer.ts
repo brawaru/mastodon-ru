@@ -34,6 +34,25 @@ const enum DatasetKeys {
 	KeepSizes = "media-viewer-keep-sizes",
 }
 
+const enum Classes {
+	/**
+	 * Добавляется элементу просмотрщика
+	 */
+	MediaOverlay = "media-overlay",
+	/**
+	 * Добавляется элементу просмотрщика, прежде, чем тот будет скрыт
+	 */
+	Hidden = "hidden",
+	/**
+	 * Добавляется элементу для встраиваемых медиа
+	 */
+	MediaMount = "media-mount",
+	/**
+	 * Добавляется элементам, для которых доступен просмотрщик
+	 */
+	MediaOverlayAvailable = "media-overlay-available",
+}
+
 let mediaViewersCount = 0;
 
 /**
@@ -56,7 +75,7 @@ export class MediaViewer {
 	constructor() {
 		const overlay = Object.assign(
 			document.createElement("div"), {
-				className: "media-overlay hidden",
+				className: `${Classes.MediaOverlay} ${Classes.Hidden}`,
 				tabIndex: 0,
 				style: "display: none",
 			},
@@ -64,7 +83,7 @@ export class MediaViewer {
 
 		const mount = Object.assign(
 			document.createElement("div"), {
-				className: "media-mount",
+				className: Classes.MediaMount,
 			},
 		);
 
@@ -215,24 +234,20 @@ export class MediaViewer {
 		}
 
 		if (isVisible) {
-			console.log("pre-class-off");
 			this._overlay.style.display = "";
 
 			await sleep(Timing.RemoveHideClass, (token) => {
 				this._cancelToken = token;
 			});
 
-			console.log("post-class-off");
-			this._overlay.classList.remove("hidden");
+			this._overlay.classList.remove(Classes.Hidden);
 		} else {
-			console.log("pre-hide");
-			this._overlay.classList.add("hidden");
+			this._overlay.classList.add(Classes.Hidden);
 
 			await sleep(Timing.SetDisplayNone, (token) => {
 				this._cancelToken = token;
 			});
 
-			console.log("post-hide");
 			this._overlay.style.display = "none";
 
 			this._mount.innerHTML = "";
@@ -373,7 +388,7 @@ export class MediaViewer {
 			popMedia(e);
 		});
 
-		media.classList.add("media-overlay-available");
+		media.classList.add(Classes.MediaOverlayAvailable);
 
 		mediaId.setMediaID(
 			media,
