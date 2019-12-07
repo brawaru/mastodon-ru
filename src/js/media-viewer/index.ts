@@ -13,7 +13,7 @@ const TIMINGS = {
  * Селекторы для которых будет осуществляться привязка к просмотрщику
  */
 const SELECTORS = [
-	"img",
+	"img:not(.no-media)",
 	".has-media",
 ];
 
