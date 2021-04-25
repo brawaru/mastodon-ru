@@ -13,7 +13,7 @@ description: "Познакомьтесь с инструментарием пе�
 
 - Самый главный — сам Mastodon, [переводится на Crowdin](https://ru.crowdin.com/project/mastodon/ru#).
 
-- Ознакомительный сайт [joinmastodon.org](https://joinmastodon.org/) переводится вручную [в репозитории](https://source.joinmastodon.org/mastodon/joinmastodon/).
+- Ознакомительный сайт [joinmastodon.org](https://joinmastodon.org/) переводится там же, но [в отдельном проекте](https://ru.crowdin.com/project/joinmastodon).
 
 **Проекты для Mastodon и вне нашего руководства**:
 
