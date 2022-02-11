@@ -29,7 +29,7 @@
     "gulp-header": "^2.0.9",
     "gulp-run-command": "0.0.10",
     "gulp-sass": "^4.0.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "node-sass": "^7.0.0",
     "rollup": "^1.27.8",
     "rollup-plugin-babel-minify": "^9.1.1",
