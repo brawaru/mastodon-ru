@@ -13,8 +13,8 @@ description: "Познакомьтесь с инструментарием пе�
 
 - [Веб-приложение и сайт](https://ru.crowdin.com/project/mastodon);
 - [Ознакомительный сайт joinmastodon.org](https://ru.crowdin.com/project/joinmastodon) ([сам сайт](https://joinmastodon.org));
-- [Приложение Mastodon для Android](https://ru.crowdin.com/project/mastodon-for-android);
-- [Приложение Mastodon для iOS](https://ru.crowdin.com/project/mastodon-for-ios).
+- [Приложение Mastodon для Android](https://ru.crowdin.com/project/mastodon-for-android) ([само приложение](https://play.google.com/store/apps/details?id=org.joinmastodon.android));
+- [Приложение Mastodon для iOS](https://ru.crowdin.com/project/mastodon-for-ios) ([само приложение](https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974)).
 
 **Проекты для Mastodon и вне нашего руководства**:
 
